@@ -10,6 +10,7 @@ This docker image support both the IP2Location (DB1 to DB24) and IP2Proxy (PX1 t
 1. Run this image as daemon using the download token and product code from [IP2Location LITE](https://lite.ip2location.com) or [IP2Location](https://www.ip2location.com).
 
        docker run --name ip2location -d \
+        -p 3306:3306 \
         -e TOKEN={token} \
         -e CODE=DB4IPV6 \
         -e MYSQL_PASSWORD=password \
